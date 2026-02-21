@@ -491,3 +491,27 @@ hr{
 @media (prefers-reduced-motion: reduce){
   .nav::before{ animation: none; }
 }
+
+/* ===== Fix dropdown/select visibility ===== */
+select, option{
+  color: var(--text) !important;
+  background-color: rgba(10, 16, 36, 0.98) !important; /* oscuro sólido */
+}
+
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid rgba(255,255,255,.16) !important;
+}
+
+/* Improve focus */
+select:focus{
+  outline: 2px solid rgba(47,128,255,.6);
+  outline-offset: 2px;
+}
+
+/* Inputs/Textareas placeholders */
+input::placeholder, textarea::placeholder{
+  color: rgba(185,196,230,.75);
+}
