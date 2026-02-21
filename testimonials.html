@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Testimonials • YS Business Services LLC</title>
+  <meta name="description" content="Client testimonials for YS Business Services LLC." />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="YS Business Services LLC logo">
+        <div>
+          <strong>YS Business Services LLC</strong><br>
+          <span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span>
+        </div>
+      </div>
+
+      <nav class="links">
+        <a href="index.html" data-en="Home" data-es="Inicio"></a>
+        <a href="services.html" data-en="Services" data-es="Servicios"></a>
+        <a href="about.html" data-en="About" data-es="Nosotros"></a>
+        <a href="faqs.html" data-en="FAQs" data-es="Preguntas"></a>
+        <a href="testimonials.html" data-en="Testimonials" data-es="Testimonios"></a>
+        <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
+
+        <div class="lang-toggle">
+          <button id="btn-en" type="button">EN</button>
+          <button id="btn-es" type="button">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section card">
+      <h2 data-en="Testimonials" data-es="Testimonios"></h2>
+      <p data-en="What clients say about working with us." data-es="Lo que dicen los clientes sobre trabajar con nosotros."></p>
+
+      <div class="card" style="margin-top:14px">
+        <h3 data-en="“Fast and organized.”" data-es="“Rápidos y organizados.”"></h3>
+        <p data-en="YS helped organize my Google profile and set up a simple reviews system. Communication was clear and delivery was fast."
+           data-es="YS me ayudó a organizar mi perfil de Google y a configurar un sistema de reseñas. La comunicación fue clara y la entrega rápida."></p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3 data-en="“We stopped losing leads.”" data-es="“Dejamos de perder leads.”"></h3>
+        <p data-en="The CRM and follow-up process made a big difference. We now track every lead and follow up consistently."
+           data-es="El CRM y el proceso de seguimiento hicieron una gran diferencia. Ahora registramos cada lead y damos seguimiento de forma constante."></p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3 data-en="“LLC filing support was smooth.”" data-es="“El apoyo para crear la LLC fue excelente.”"></h3>
+        <p data-en="YS made the formation paperwork simple and guided me step-by-step through what was needed to file."
+           data-es="YS hizo el proceso de documentos simple y me guió paso a paso con lo necesario para hacer el filing."></p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3 data-en="“Bookkeeping is finally organized.”" data-es="“La contabilidad quedó organizada.”"></h3>
+        <p data-en="They helped clean up categories and organize records for monthly reporting. Everything is easier to manage now."
+           data-es="Me ayudaron a limpiar categorías y organizar registros para reportes mensuales. Ahora todo es mucho más fácil de manejar."></p>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3 data-en="“Professional and practical advice.”" data-es="“Consejos profesionales y prácticos.”"></h3>
+        <p data-en="We consulted YS for operational guidance and got clear, actionable steps that helped our project move forward."
+           data-es="Consultamos a YS para mejorar operaciones y recibimos pasos claros y accionables que ayudaron a avanzar el proyecto."></p>
+      </div>
+
+      <p style="margin-top:14px;font-size:14px;color:var(--muted)"
+         data-en="Note: Testimonials are examples of client experiences. Results can vary by business and implementation."
+         data-es="Nota: Los testimonios son ejemplos de experiencias. Los resultados pueden variar según el negocio y la implementación."></p>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="contact.html" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="services.html" data-en="View Services" data-es="Ver Servicios"></a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="y"></span> YS Business Services LLC</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="lang.js"></script>
+
+  </div>
+</body>
+</html>

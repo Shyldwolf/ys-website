@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>FAQs • YS Business Services LLC</title>
+  <meta name="description" content="Frequently asked questions for YS Business Services LLC." />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="YS Business Services LLC logo">
+        <div>
+          <strong>YS Business Services LLC</strong><br>
+          <span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span>
+        </div>
+      </div>
+
+      <nav class="links">
+        <a href="index.html" data-en="Home" data-es="Inicio"></a>
+        <a href="services.html" data-en="Services" data-es="Servicios"></a>
+        <a href="about.html" data-en="About" data-es="Nosotros"></a>
+        <a href="faqs.html" data-en="FAQs" data-es="Preguntas"></a>
+        <a href="testimonials.html" data-en="Testimonials" data-es="Testimonios"></a>
+        <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
+
+        <div class="lang-toggle">
+          <button id="btn-en" type="button">EN</button>
+          <button id="btn-es" type="button">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section card">
+      <h2 data-en="FAQs" data-es="Preguntas Frecuentes"></h2>
+      <p data-en="Common questions about our services." data-es="Preguntas comunes sobre nuestros servicios."></p>
+
+      <h3 data-en="1) Do you provide legal advice for business formation?" data-es="1) ¿Ofrecen asesoría legal para crear empresas?"></h3>
+      <p data-en="No. We provide administrative filing assistance and document organization. We are not a law firm and do not provide legal advice."
+         data-es="No. Brindamos asistencia administrativa para filing y organización de documentos. No somos abogados y no ofrecemos asesoría legal."></p>
+
+      <h3 data-en="2) Can you help form an LLC or corporation in any state?" data-es="2) ¿Pueden ayudar a crear una LLC o corporación en cualquier estado?"></h3>
+      <p data-en="Yes. We can assist with formation support in any U.S. state. State fees and processing times vary."
+         data-es="Sí. Podemos apoyar con formación de empresas en cualquier estado de EE. UU. Los fees y tiempos varían por estado."></p>
+
+      <h3 data-en="3) Do you offer accounting or tax services?" data-es="3) ¿Ofrecen contabilidad o impuestos?"></h3>
+      <p data-en="We offer bookkeeping and QuickBooks support (record organization, reconciliations, basic reporting). We are not a CPA firm and do not provide tax advice. We can help you get organized for your CPA/EA."
+         data-es="Ofrecemos contabilidad básica y soporte QuickBooks (organización de registros, conciliaciones, reportes básicos). No somos CPA y no ofrecemos asesoría fiscal. Podemos ayudarte a organizarte para tu CPA/EA."></p>
+
+      <h3 data-en="4) How does Google Business Profile optimization help me?" data-es="4) ¿Cómo ayuda la optimización de Google Business Profile?"></h3>
+      <p data-en="It improves your visibility and helps you get more calls and messages. We optimize services, areas, photos, business description, and set up a simple reviews system."
+         data-es="Mejora tu visibilidad y ayuda a recibir más llamadas y mensajes. Optimizamos servicios, áreas, fotos, descripción y configuramos un sistema simple de reseñas."></p>
+
+      <h3 data-en="5) What do you need from me to start?" data-es="5) ¿Qué necesitan de mí para empezar?"></h3>
+      <p data-en="Usually: business details (services, areas, hours), phone/email, and access (invite) to your Google profile (if applicable). Photos and logo help a lot."
+         data-es="Generalmente: datos del negocio (servicios, áreas, horario), teléfono/email y acceso (invitación) a tu Google profile (si aplica). Fotos y logo ayudan mucho."></p>
+
+      <h3 data-en="6) How do payments work?" data-es="6) ¿Cómo funcionan los pagos?"></h3>
+      <p data-en="We send an invoice/quote in writing. After payment, we begin onboarding and start work. Payment terms may vary by service."
+         data-es="Enviamos factura/cotización por escrito. Después del pago iniciamos onboarding y comenzamos el trabajo. Los términos pueden variar según el servicio."></p>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="contact.html" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="services.html" data-en="View Services" data-es="Ver Servicios"></a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="y"></span> YS Business Services LLC</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="lang.js"></script>
+
+  </div>
+</body>
+</html>

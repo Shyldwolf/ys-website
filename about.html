@@ -1,38 +1,101 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>About • YS Business Services LLC</title><link rel="stylesheet" href="styles.css"/></head><body><div class="container">
-<header class="nav">
-  <div class="brand">
-    <img src="assets/logo.png" alt="YS Business Services LLC logo">
-    <div><strong>YS Business Services LLC</strong><br><span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About • YS Business Services LLC</title>
+  <meta name="description" content="About YS Business Services LLC." />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="YS Business Services LLC logo">
+        <div>
+          <strong>YS Business Services LLC</strong><br>
+          <span style="color:var(--muted);font-size:13px">North Carolina • Call/Text 980-382-1014</span>
+        </div>
+      </div>
+
+      <nav class="links">
+        <a href="index.html" data-en="Home" data-es="Inicio"></a>
+        <a href="services.html" data-en="Services" data-es="Servicios"></a>
+        <a href="about.html" data-en="About" data-es="Nosotros"></a>
+        <a href="faqs.html" data-en="FAQs" data-es="Preguntas"></a>
+        <a href="testimonials.html" data-en="Testimonials" data-es="Testimonios"></a>
+        <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
+
+        <div class="lang-toggle">
+          <button id="btn-en" type="button">EN</button>
+          <button id="btn-es" type="button">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="section card">
+      <h2 data-en="About Us" data-es="Sobre Nosotros"></h2>
+
+      <p data-en="YS Business Services LLC helps small businesses and contractors across North Carolina start, stay organized, and grow with practical systems and dependable support."
+         data-es="YS Business Services LLC ayuda a pequeños negocios y contratistas en Carolina del Norte a iniciar, organizarse y crecer con sistemas prácticos y apoyo confiable."></p>
+
+      <p data-en="We focus on the work that slows business owners down—setup, paperwork, organization, and follow-up—so you can spend more time serving customers and generating revenue."
+         data-es="Nos enfocamos en lo que suele atrasar a los dueños de negocios—configuración, papeleo, organización y seguimiento—para que tengas más tiempo para atender clientes y generar ingresos."></p>
+
+      <h3 data-en="What We Do" data-es="Qué Hacemos"></h3>
+      <ul class="list">
+        <li data-en="Google Business Profile optimization, reviews systems, and lead tracking + follow-up."
+            data-es="Optimización de Google Business Profile, sistema de reseñas y registro/seguimiento de leads."></li>
+        <li data-en="Website / funnel pages and quote forms that convert visitors into leads."
+            data-es="Páginas web / funnels y formularios de cotización para convertir visitantes en leads."></li>
+        <li data-en="Business formation support (filing assistance) and business organization systems."
+            data-es="Apoyo en formación de empresas (filing assistance) y sistemas de organización del negocio."></li>
+        <li data-en="Bookkeeping & QuickBooks support (record organization, reconciliations, basic reporting)."
+            data-es="Soporte de contabilidad básica & QuickBooks (organización de registros, conciliaciones, reportes básicos)."></li>
+      </ul>
+
+      <h3 data-en="Why Clients Choose Us" data-es="Por Qué Nos Eligen"></h3>
+      <ul class="list">
+        <li data-en="Clear steps, fast turnaround, and organized delivery."
+            data-es="Pasos claros, entrega rápida y resultados organizados."></li>
+        <li data-en="Simple systems that are easy to run (even without a big team)."
+            data-es="Sistemas simples y fáciles de manejar (aunque no tengas un equipo grande)."></li>
+        <li data-en="Support in English and Spanish."
+            data-es="Soporte en inglés y español."></li>
+        <li data-en="Practical solutions designed for real small businesses."
+            data-es="Soluciones prácticas diseñadas para negocios reales."></li>
+      </ul>
+
+      <h3 data-en="Important Notice" data-es="Aviso Importante"></h3>
+      <p data-en="YS Business Services LLC is not a law firm and does not provide legal advice. We are not a CPA firm and do not provide tax advice. If you need legal or tax guidance, consult a licensed professional."
+         data-es="YS Business Services LLC no es un bufete de abogados y no ofrece asesoría legal. No somos una firma CPA y no ofrecemos asesoría fiscal. Si necesita orientación legal o fiscal, consulte a un profesional licenciado."></p>
+
+      <p data-en="Contact: ysbusinessservices@gmail.com • 980-382-1014"
+         data-es="Contacto: ysbusinessservices@gmail.com • 980-382-1014"></p>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="contact.html" data-en="Get a Quote" data-es="Cotizar"></a>
+        <a class="btn outline" href="services.html" data-en="View Services" data-es="Ver Servicios"></a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="y"></span> YS Business Services LLC</div>
+      <div style="margin-top:6px">
+        <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
+        <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script src="lang.js"></script>
+
   </div>
-  <nav class="links">
-    <a href="index.html" data-en="Home" data-es="Inicio"></a>
-    <a href="services.html" data-en="Services" data-es="Servicios"></a>
-    <a href="about.html" data-en="About" data-es="Nosotros"></a>
-    <a href="contact.html" class="btn" data-en="Get a Quote" data-es="Cotizar"></a>
-    <a class="btn outline" href="tel:+19803821014" data-en="Call" data-es="Llamar"></a>
-    <div class="lang-toggle"><button id="btn-en" type="button">EN</button><button id="btn-es" type="button">ES</button></div>
-  </nav>
-</header>
-<section class="section">
-<h2 data-en="About Us" data-es="Sobre Nosotros"></h2>
-<p data-en="YS Business Services LLC helps small businesses and contractors in North Carolina build a stronger foundation, stay organized, and grow with simple, practical systems."
-   data-es="YS Business Services LLC ayuda a pequeños negocios y contratistas en Carolina del Norte a crear una base sólida, organizarse y crecer con sistemas simples y prácticos."></p>
-<h2 style="margin-top:22px" data-en="What We Do" data-es="Qué hacemos"></h2>
-<ul class="list">
-<li data-en="Formation support (filing assistance) and document organization." data-es="Creación de empresa (filing assistance) y organización de documentos."></li>
-<li data-en="Bookkeeping & QuickBooks support (recordkeeping and reporting)." data-es="Bookkeeping y QuickBooks (registros y reportes)."></li>
-<li data-en="Google profile optimization, reviews system, and CRM setup." data-es="Optimización Google, sistema de reseñas y configuración de CRM."></li>
-</ul>
-<div class="card" style="margin-top:18px"><p data-en="Call/Text: 980-382-1014 • Email: ysbusinessservices@gmail.com" data-es="Llama/Escribe: 980-382-1014 • Correo: ysbusinessservices@gmail.com"></p></div>
-</section>
-<footer class="footer">
-  <div>© <span id="y"></span> YS Business Services LLC</div>
-  <div style="margin-top:6px">
-    <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad"></a> •
-    <a href="terms.html" data-en="Terms & Conditions" data-es="Términos y Condiciones"></a>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-<script src="lang.js"></script>
-</div></body></html>
+</body>
+</html>
