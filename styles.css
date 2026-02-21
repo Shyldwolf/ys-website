@@ -52,7 +52,7 @@ body::before{
     linear-gradient(180deg, rgba(7, 12, 24, 0.86), rgba(7, 12, 24, 0.92));
 }
 
-/* Soft grain for depth (optional look) */
+/* Soft grain for depth */
 body::after{
   content:"";
   position: fixed;
@@ -67,7 +67,6 @@ body::after{
 
 a{ color:inherit; text-decoration:none; }
 a:hover{ text-decoration:none; }
-
 ::selection{ background: rgba(47,128,255,.28); }
 
 /* ---------- Layout ---------- */
@@ -78,44 +77,84 @@ a:hover{ text-decoration:none; }
   position: relative;
 }
 
-/* ---------- Nav ---------- */
+/* ---------- NAV (Premium glass bar) ---------- */
+/* Make the header sticky and readable on any background */
 .nav{
+  position: sticky;
+  top: 10px;
+  z-index: 50;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding: 14px 0 18px;
+
+  padding: 14px 14px;
+  margin: 6px 0 18px;
+
+  border-radius: 20px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 46px rgba(0,0,0,.38);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
+/* subtle highlight inside the glass bar */
+.nav::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: 20px;
+  pointer-events:none;
+  background:
+    radial-gradient(420px 220px at 10% 15%, rgba(47,128,255,.16), transparent 60%),
+    radial-gradient(420px 220px at 85% 10%, rgba(0,215,176,.14), transparent 60%);
+  opacity:.9;
+}
+
+.nav > *{ position: relative; }
+
+/* ---------- Branding (bigger + stronger) ---------- */
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  min-width: 240px;
+  gap:14px;
+  min-width: 320px;
 }
 
 .brand img{
-  height: 44px;
+  height: 60px; /* bigger logo */
   width:auto;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,.45));
 }
 
 .brand strong{
-  letter-spacing:.2px;
-  font-size: 14px;
+  font-size: 18px; /* bigger company name */
+  letter-spacing:.3px;
+  line-height:1.1;
+  color: var(--text);
+  text-shadow: 0 14px 26px rgba(0,0,0,.45);
 }
 
+/* tagline under name (your HTML uses inline style; we override it) */
+.brand span{
+  font-size: 14px !important;
+  color: rgba(233,240,255,.92) !important;
+}
+
+/* ---------- Nav links ---------- */
 .links{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
   flex-wrap:wrap;
   justify-content:flex-end;
 }
 
 .links a{
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 13px;
   padding: 10px 10px;
   border-radius: 12px;
@@ -374,7 +413,16 @@ a:focus, button:focus{
 
 @media (max-width: 780px){
   body{ background-attachment: scroll; } /* smoother on mobile */
-  .nav{ flex-direction: column; align-items:flex-start; }
+  .nav{
+    top: 8px;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .brand{ min-width: unset; }
+  .brand img{ height: 54px; }
+  .brand strong{ font-size: 16px; }
+  .brand span{ font-size: 13px !important; }
+
   .links{ width:100%; justify-content:flex-start; }
   .hero h1{ font-size: 32px; }
   .hero p{ font-size: 16px; }
@@ -388,4 +436,58 @@ hr{
   border:none;
   border-top: 1px solid rgba(255,255,255,.12);
   margin: 18px 0;
+}
+
+/* ===== Premium header shine ===== */
+.nav{
+  overflow: hidden; /* needed for shine */
+}
+
+.nav::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 20px;
+  pointer-events:none;
+
+  /* thin top glow line + soft edge glow */
+  background:
+    linear-gradient(90deg,
+      rgba(47,128,255,0) 0%,
+      rgba(47,128,255,.45) 18%,
+      rgba(0,215,176,.45) 50%,
+      rgba(47,128,255,.45) 82%,
+      rgba(47,128,255,0) 100%) top / 100% 2px no-repeat,
+    radial-gradient(700px 240px at 50% 0%,
+      rgba(47,128,255,.14),
+      transparent 60%);
+
+  opacity:.9;
+}
+
+/* moving shine */
+.nav::before{
+  /* keep your existing ::before glow + add a subtle moving band */
+  background:
+    radial-gradient(420px 220px at 10% 15%, rgba(47,128,255,.16), transparent 60%),
+    radial-gradient(420px 220px at 85% 10%, rgba(0,215,176,.14), transparent 60%),
+    linear-gradient(115deg,
+      transparent 0%,
+      rgba(255,255,255,.06) 45%,
+      rgba(255,255,255,.10) 50%,
+      rgba(255,255,255,.06) 55%,
+      transparent 100%);
+  background-size: auto, auto, 260% 100%;
+  animation: navShine 10s ease-in-out infinite;
+}
+
+@keyframes navShine{
+  0%{ background-position: 0 0, 0 0, 0% 0; }
+  50%{ background-position: 0 0, 0 0, 100% 0; }
+  100%{ background-position: 0 0, 0 0, 0% 0; }
+}
+
+/* Respect accessibility */
+@media (prefers-reduced-motion: reduce){
+  .nav::before{ animation: none; }
 }
