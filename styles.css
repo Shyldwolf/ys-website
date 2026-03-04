@@ -1134,17 +1134,26 @@ textarea::placeholder {
 }
 
 
- @media (max-width: 780px){
+/* FIX logo en móvil vertical */
+@media (max-width: 780px){
   .brand{
-    overflow: visible !important;  /* evita que recorte el logo */
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+    overflow: visible !important;
   }
 
   .brand img{
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
     height: 42px !important;
     width: auto !important;
-    transform: none !important;     /* quita el scale */
-    margin-left: 0 !important;      /* evita que se vaya fuera */
-    position: relative;
-    left: -48px;                    /* mueve sin “desaparecer” */
+
+    transform: none !important;     /* mata el scale(2.4) */
+    position: relative !important;
+    margin-left: -48px !important;  
   }
 }
